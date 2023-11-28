@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { SignupValidation } from "@/lib/validation";
 import { Loader } from "lucide-react";
+import { createUserAccount } from "@/lib/appwrite/api";
 // import Loader from "@/components/shared/Loader";
 // import { useToast } from "@/components/ui/use-toast";
 
@@ -38,55 +39,13 @@ const SignupForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof SignupValidation>) {
+  async function onSubmit(values: z.infer<typeof SignupValidation>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values)
+    const newUser = await createUserAccount(values);
+    console.log(newUser)
   }
 
-  // Queries
-  // const { mutateAsync: createUserAccount, isLoading: isCreatingAccount } = useCreateUserAccount();
-  // const { mutateAsync: signInAccount, isLoading: isSigningInUser } = useSignInAccount();
-
-  // Handler
-  // const handleSignup = async (user: z.infer<typeof SignupValidation>) => {
-  //   try {
-  //     const newUser = await createUserAccount(user);
-
-  //     if (!newUser) {
-  //       toast({ title: "Sign up failed. Please try again.", });
-        
-  //       return;
-  //     }
-
-  //     const session = await signInAccount({
-  //       email: user.email,
-  //       password: user.password,
-  //     });
-
-  //     if (!session) {
-  //       toast({ title: "Something went wrong. Please login your new account", });
-        
-  //       navigate("/sign-in");
-        
-  //       return;
-  //     }
-
-  //     const isLoggedIn = await checkAuthUser();
-
-  //     if (isLoggedIn) {
-  //       form.reset();
-
-  //       navigate("/");
-  //     } else {
-  //       toast({ title: "Login failed. Please try again.", });
-        
-  //       return;
-  //     }
-  //   } catch (error) {
-  //     console.log({ error });
-  //   }
-  // };
 
   return (
       
