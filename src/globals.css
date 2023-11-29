@@ -9,9 +9,9 @@
     @apply box-border list-none p-0 m-0 scroll-smooth;
   }
 
-  /* body {
+  body {
     @apply bg-dark-1 text-white min-h-screen font-inter;
-  } */
+  }
 }
 
 @layer utilities {
@@ -153,7 +153,7 @@
   }
 
   .post_details-card {
-    @apply  w-full max-w-5xl rounded-[30px] flex-col flex xl:flex-row border border-dark-4 xl:rounded-l-[24px];
+    @apply bg-dark-2 w-full max-w-5xl rounded-[30px] flex-col flex xl:flex-row border border-dark-4 xl:rounded-l-[24px];
   }
 
   .post_details-img {
@@ -161,7 +161,7 @@
   }
 
   .post_details-info {
-    @apply  flex flex-col gap-5 lg:gap-7 flex-1 items-start p-8 rounded-[30px];
+    @apply bg-dark-2 flex flex-col gap-5 lg:gap-7 flex-1 items-start p-8 rounded-[30px];
   }
 
   .post_details-delete_btn {
@@ -178,7 +178,7 @@
   }
 
   .profile-tab {
-    @apply flex-center gap-3 py-4 w-48  transition flex-1 xl:flex-initial;
+    @apply flex-center gap-3 py-4 w-48 bg-dark-2  transition flex-1 xl:flex-initial;
   }
 
   /* Saved */
@@ -188,7 +188,7 @@
 
   /* Bottom bar */
   .bottom-bar {
-    @apply z-50 flex-between w-full sticky bottom-0 rounded-t-[20px]  px-5 py-4 md:hidden;
+    @apply z-50 flex-between w-full sticky bottom-0 rounded-t-[20px] bg-dark-2 px-5 py-4 md:hidden;
   }
 
   /* File uploader */
@@ -219,7 +219,7 @@
 
   /* Left sidebar */
   .leftsidebar {
-    @apply hidden md:flex px-6 py-10 flex-col justify-between min-w-[270px] ;
+    @apply hidden md:flex px-6 py-10 flex-col justify-between min-w-[270px] bg-dark-2;
   }
 
   .leftsidebar-link {
@@ -228,7 +228,7 @@
 
   /* Post Card */
   .post-card {
-    @apply rounded-3xl border border-dark-4 p-5 lg:p-7 w-full max-w-screen-sm;
+    @apply bg-dark-2 rounded-3xl border border-dark-4 p-5 lg:p-7 w-full max-w-screen-sm;
   }
 
   .post-card_img {
@@ -258,7 +258,7 @@
   }
 
   .shad-input {
-    @apply h-12 border-none focus-visible:ring-1 focus-visible:ring-offset-1 !important;
+    @apply h-12 bg-dark-4 border-none placeholder:text-light-4 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
   }
 
   .shad-textarea {
@@ -267,7 +267,7 @@
 
   /* Button */
   .shad-button_primary {
-    @apply  flex gap-2 !important;
+    @apply bg-primary-500 hover:bg-primary-500 text-light-1 flex gap-2 !important;
   }
 
   .shad-button_dark_4 {
